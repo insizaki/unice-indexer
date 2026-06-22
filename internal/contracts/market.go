@@ -31,7 +31,7 @@ var (
 
 // UnicePredictionMarketMetaData contains all meta data concerning the UnicePredictionMarket contract.
 var UnicePredictionMarketMetaData = &bind.MetaData{
-	ABI: "[{\"type\":\"constructor\",\"inputs\":[{\"name\":\"_question\",\"type\":\"string\",\"internalType\":\"string\"},{\"name\":\"_category\",\"type\":\"string\",\"internalType\":\"string\"},{\"name\":\"_admin\",\"type\":\"address\",\"internalType\":\"address\"},{\"name\":\"_collateralToken\",\"type\":\"address\",\"internalType\":\"address\"},{\"name\":\"_bettingDeadline\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_resolutionDeadline\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"CHALLENGE_WINDOW\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"MOCK_APY_BPS\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"PROTOCOL_FEE_BPS\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"admin\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"bet\",\"inputs\":[{\"name\":\"isYes\",\"type\":\"bool\",\"internalType\":\"bool\"},{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"bettingDeadline\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"category\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"string\",\"internalType\":\"string\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"challenge\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"challenged\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"claim\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"claimed\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"collateralToken\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"contractIERC20\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"createdAt\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"expireClaim\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"finalize\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"finalized\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getClaimable\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"principal\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"yieldEarned\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"total\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getEstimatedYield\",\"inputs\":[],\"outputs\":[{\"name\":\"estimated\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getMarketInfo\",\"inputs\":[],\"outputs\":[{\"name\":\"_question\",\"type\":\"string\",\"internalType\":\"string\"},{\"name\":\"_category\",\"type\":\"string\",\"internalType\":\"string\"},{\"name\":\"_bettingDeadline\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_resolutionDeadline\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_totalYesPool\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_totalNoPool\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_totalPool\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_yieldGenerated\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_outcome\",\"type\":\"uint8\",\"internalType\":\"uint8\"},{\"name\":\"_finalized\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getOdds\",\"inputs\":[],\"outputs\":[{\"name\":\"yesPct\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"noPct\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getStatus\",\"inputs\":[],\"outputs\":[{\"name\":\"status\",\"type\":\"string\",\"internalType\":\"string\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"noShares\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"outcome\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint8\",\"internalType\":\"enumUnicePredictionMarket.Outcome\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"protocolFeeAccrued\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"question\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"string\",\"internalType\":\"string\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"resolutionDeadline\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"submitResult\",\"inputs\":[{\"name\":\"_outcome\",\"type\":\"uint8\",\"internalType\":\"uint8\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"submittedAt\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalNoPool\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalPool\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalYesPool\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"withdrawProtocolFee\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"yesShares\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"yieldGenerated\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"event\",\"name\":\"BetPlaced\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"isYes\",\"type\":\"bool\",\"indexed\":false,\"internalType\":\"bool\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"MarketFinalized\",\"inputs\":[{\"name\":\"outcome\",\"type\":\"uint8\",\"indexed\":false,\"internalType\":\"uint8\"},{\"name\":\"yieldGenerated\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"PrincipalRefunded\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"ResultChallenged\",\"inputs\":[{\"name\":\"challenger\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"ResultSubmitted\",\"inputs\":[{\"name\":\"outcome\",\"type\":\"uint8\",\"indexed\":false,\"internalType\":\"uint8\"},{\"name\":\"timestamp\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"WinningsClaimed\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"principal\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"},{\"name\":\"yield\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"error\",\"name\":\"ReentrancyGuardReentrantCall\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"SafeERC20FailedOperation\",\"inputs\":[{\"name\":\"token\",\"type\":\"address\",\"internalType\":\"address\"}]}]",
+	ABI: "[{\"type\":\"constructor\",\"inputs\":[{\"name\":\"_question\",\"type\":\"string\",\"internalType\":\"string\"},{\"name\":\"_category\",\"type\":\"string\",\"internalType\":\"string\"},{\"name\":\"_admin\",\"type\":\"address\",\"internalType\":\"address\"},{\"name\":\"_collateralToken\",\"type\":\"address\",\"internalType\":\"address\"},{\"name\":\"_bettingDeadline\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_resolutionDeadline\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"CHALLENGE_WINDOW\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"admin\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"bet\",\"inputs\":[{\"name\":\"isYes\",\"type\":\"bool\",\"internalType\":\"bool\"},{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"bettingDeadline\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"category\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"string\",\"internalType\":\"string\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"challenge\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"challenged\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"claim\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"claimed\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"collateralToken\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"contractIERC20\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"expireClaim\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"finalize\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"finalized\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getClaimable\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"claimable\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getMarketInfo\",\"inputs\":[],\"outputs\":[{\"name\":\"_question\",\"type\":\"string\",\"internalType\":\"string\"},{\"name\":\"_category\",\"type\":\"string\",\"internalType\":\"string\"},{\"name\":\"_bettingDeadline\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_resolutionDeadline\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_totalYesPool\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_totalNoPool\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"_outcome\",\"type\":\"uint8\",\"internalType\":\"uint8\"},{\"name\":\"_finalized\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getOdds\",\"inputs\":[],\"outputs\":[{\"name\":\"yesPct\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"noPct\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getStatus\",\"inputs\":[],\"outputs\":[{\"name\":\"status\",\"type\":\"string\",\"internalType\":\"string\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"noShares\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"outcome\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint8\",\"internalType\":\"enumUnicePredictionMarket.Outcome\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"question\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"string\",\"internalType\":\"string\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"resolutionDeadline\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"submitResult\",\"inputs\":[{\"name\":\"_outcome\",\"type\":\"uint8\",\"internalType\":\"uint8\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"submittedAt\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalNoPool\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalYesPool\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"yesShares\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"event\",\"name\":\"BetPlaced\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"isYes\",\"type\":\"bool\",\"indexed\":false,\"internalType\":\"bool\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"ExpireRefundClaimed\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"MarketFinalized\",\"inputs\":[{\"name\":\"outcome\",\"type\":\"uint8\",\"indexed\":false,\"internalType\":\"uint8\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"ResultChallenged\",\"inputs\":[{\"name\":\"challenger\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"ResultSubmitted\",\"inputs\":[{\"name\":\"outcome\",\"type\":\"uint8\",\"indexed\":false,\"internalType\":\"uint8\"},{\"name\":\"timestamp\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"WinningsClaimed\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"error\",\"name\":\"ReentrancyGuardReentrantCall\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"SafeERC20FailedOperation\",\"inputs\":[{\"name\":\"token\",\"type\":\"address\",\"internalType\":\"address\"}]}]",
 }
 
 // UnicePredictionMarketABI is the input ABI used to generate the binding from.
@@ -209,68 +209,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketSession) CHALLENGEWINDOW() (*
 // Solidity: function CHALLENGE_WINDOW() view returns(uint256)
 func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) CHALLENGEWINDOW() (*big.Int, error) {
 	return _UnicePredictionMarket.Contract.CHALLENGEWINDOW(&_UnicePredictionMarket.CallOpts)
-}
-
-// MOCKAPYBPS is a free data retrieval call binding the contract method 0x7a05b4e7.
-//
-// Solidity: function MOCK_APY_BPS() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCaller) MOCKAPYBPS(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _UnicePredictionMarket.contract.Call(opts, &out, "MOCK_APY_BPS")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// MOCKAPYBPS is a free data retrieval call binding the contract method 0x7a05b4e7.
-//
-// Solidity: function MOCK_APY_BPS() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketSession) MOCKAPYBPS() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.MOCKAPYBPS(&_UnicePredictionMarket.CallOpts)
-}
-
-// MOCKAPYBPS is a free data retrieval call binding the contract method 0x7a05b4e7.
-//
-// Solidity: function MOCK_APY_BPS() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) MOCKAPYBPS() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.MOCKAPYBPS(&_UnicePredictionMarket.CallOpts)
-}
-
-// PROTOCOLFEEBPS is a free data retrieval call binding the contract method 0xbe378228.
-//
-// Solidity: function PROTOCOL_FEE_BPS() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCaller) PROTOCOLFEEBPS(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _UnicePredictionMarket.contract.Call(opts, &out, "PROTOCOL_FEE_BPS")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// PROTOCOLFEEBPS is a free data retrieval call binding the contract method 0xbe378228.
-//
-// Solidity: function PROTOCOL_FEE_BPS() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketSession) PROTOCOLFEEBPS() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.PROTOCOLFEEBPS(&_UnicePredictionMarket.CallOpts)
-}
-
-// PROTOCOLFEEBPS is a free data retrieval call binding the contract method 0xbe378228.
-//
-// Solidity: function PROTOCOL_FEE_BPS() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) PROTOCOLFEEBPS() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.PROTOCOLFEEBPS(&_UnicePredictionMarket.CallOpts)
 }
 
 // Admin is a free data retrieval call binding the contract method 0xf851a440.
@@ -459,37 +397,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) CollateralToke
 	return _UnicePredictionMarket.Contract.CollateralToken(&_UnicePredictionMarket.CallOpts)
 }
 
-// CreatedAt is a free data retrieval call binding the contract method 0xcf09e0d0.
-//
-// Solidity: function createdAt() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCaller) CreatedAt(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _UnicePredictionMarket.contract.Call(opts, &out, "createdAt")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// CreatedAt is a free data retrieval call binding the contract method 0xcf09e0d0.
-//
-// Solidity: function createdAt() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketSession) CreatedAt() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.CreatedAt(&_UnicePredictionMarket.CallOpts)
-}
-
-// CreatedAt is a free data retrieval call binding the contract method 0xcf09e0d0.
-//
-// Solidity: function createdAt() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) CreatedAt() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.CreatedAt(&_UnicePredictionMarket.CallOpts)
-}
-
 // Finalized is a free data retrieval call binding the contract method 0xb3f05b97.
 //
 // Solidity: function finalized() view returns(bool)
@@ -523,60 +430,10 @@ func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) Finalized() (b
 
 // GetClaimable is a free data retrieval call binding the contract method 0xa583024b.
 //
-// Solidity: function getClaimable(address user) view returns(uint256 principal, uint256 yieldEarned, uint256 total)
-func (_UnicePredictionMarket *UnicePredictionMarketCaller) GetClaimable(opts *bind.CallOpts, user common.Address) (struct {
-	Principal   *big.Int
-	YieldEarned *big.Int
-	Total       *big.Int
-}, error) {
+// Solidity: function getClaimable(address user) view returns(uint256 claimable)
+func (_UnicePredictionMarket *UnicePredictionMarketCaller) GetClaimable(opts *bind.CallOpts, user common.Address) (*big.Int, error) {
 	var out []interface{}
 	err := _UnicePredictionMarket.contract.Call(opts, &out, "getClaimable", user)
-
-	outstruct := new(struct {
-		Principal   *big.Int
-		YieldEarned *big.Int
-		Total       *big.Int
-	})
-	if err != nil {
-		return *outstruct, err
-	}
-
-	outstruct.Principal = *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-	outstruct.YieldEarned = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
-	outstruct.Total = *abi.ConvertType(out[2], new(*big.Int)).(**big.Int)
-
-	return *outstruct, err
-
-}
-
-// GetClaimable is a free data retrieval call binding the contract method 0xa583024b.
-//
-// Solidity: function getClaimable(address user) view returns(uint256 principal, uint256 yieldEarned, uint256 total)
-func (_UnicePredictionMarket *UnicePredictionMarketSession) GetClaimable(user common.Address) (struct {
-	Principal   *big.Int
-	YieldEarned *big.Int
-	Total       *big.Int
-}, error) {
-	return _UnicePredictionMarket.Contract.GetClaimable(&_UnicePredictionMarket.CallOpts, user)
-}
-
-// GetClaimable is a free data retrieval call binding the contract method 0xa583024b.
-//
-// Solidity: function getClaimable(address user) view returns(uint256 principal, uint256 yieldEarned, uint256 total)
-func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) GetClaimable(user common.Address) (struct {
-	Principal   *big.Int
-	YieldEarned *big.Int
-	Total       *big.Int
-}, error) {
-	return _UnicePredictionMarket.Contract.GetClaimable(&_UnicePredictionMarket.CallOpts, user)
-}
-
-// GetEstimatedYield is a free data retrieval call binding the contract method 0x8511fc93.
-//
-// Solidity: function getEstimatedYield() view returns(uint256 estimated)
-func (_UnicePredictionMarket *UnicePredictionMarketCaller) GetEstimatedYield(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _UnicePredictionMarket.contract.Call(opts, &out, "getEstimatedYield")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -588,23 +445,23 @@ func (_UnicePredictionMarket *UnicePredictionMarketCaller) GetEstimatedYield(opt
 
 }
 
-// GetEstimatedYield is a free data retrieval call binding the contract method 0x8511fc93.
+// GetClaimable is a free data retrieval call binding the contract method 0xa583024b.
 //
-// Solidity: function getEstimatedYield() view returns(uint256 estimated)
-func (_UnicePredictionMarket *UnicePredictionMarketSession) GetEstimatedYield() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.GetEstimatedYield(&_UnicePredictionMarket.CallOpts)
+// Solidity: function getClaimable(address user) view returns(uint256 claimable)
+func (_UnicePredictionMarket *UnicePredictionMarketSession) GetClaimable(user common.Address) (*big.Int, error) {
+	return _UnicePredictionMarket.Contract.GetClaimable(&_UnicePredictionMarket.CallOpts, user)
 }
 
-// GetEstimatedYield is a free data retrieval call binding the contract method 0x8511fc93.
+// GetClaimable is a free data retrieval call binding the contract method 0xa583024b.
 //
-// Solidity: function getEstimatedYield() view returns(uint256 estimated)
-func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) GetEstimatedYield() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.GetEstimatedYield(&_UnicePredictionMarket.CallOpts)
+// Solidity: function getClaimable(address user) view returns(uint256 claimable)
+func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) GetClaimable(user common.Address) (*big.Int, error) {
+	return _UnicePredictionMarket.Contract.GetClaimable(&_UnicePredictionMarket.CallOpts, user)
 }
 
 // GetMarketInfo is a free data retrieval call binding the contract method 0x23341a05.
 //
-// Solidity: function getMarketInfo() view returns(string _question, string _category, uint256 _bettingDeadline, uint256 _resolutionDeadline, uint256 _totalYesPool, uint256 _totalNoPool, uint256 _totalPool, uint256 _yieldGenerated, uint8 _outcome, bool _finalized)
+// Solidity: function getMarketInfo() view returns(string _question, string _category, uint256 _bettingDeadline, uint256 _resolutionDeadline, uint256 _totalYesPool, uint256 _totalNoPool, uint8 _outcome, bool _finalized)
 func (_UnicePredictionMarket *UnicePredictionMarketCaller) GetMarketInfo(opts *bind.CallOpts) (struct {
 	Question           string
 	Category           string
@@ -612,8 +469,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketCaller) GetMarketInfo(opts *b
 	ResolutionDeadline *big.Int
 	TotalYesPool       *big.Int
 	TotalNoPool        *big.Int
-	TotalPool          *big.Int
-	YieldGenerated     *big.Int
 	Outcome            uint8
 	Finalized          bool
 }, error) {
@@ -627,8 +482,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketCaller) GetMarketInfo(opts *b
 		ResolutionDeadline *big.Int
 		TotalYesPool       *big.Int
 		TotalNoPool        *big.Int
-		TotalPool          *big.Int
-		YieldGenerated     *big.Int
 		Outcome            uint8
 		Finalized          bool
 	})
@@ -642,10 +495,8 @@ func (_UnicePredictionMarket *UnicePredictionMarketCaller) GetMarketInfo(opts *b
 	outstruct.ResolutionDeadline = *abi.ConvertType(out[3], new(*big.Int)).(**big.Int)
 	outstruct.TotalYesPool = *abi.ConvertType(out[4], new(*big.Int)).(**big.Int)
 	outstruct.TotalNoPool = *abi.ConvertType(out[5], new(*big.Int)).(**big.Int)
-	outstruct.TotalPool = *abi.ConvertType(out[6], new(*big.Int)).(**big.Int)
-	outstruct.YieldGenerated = *abi.ConvertType(out[7], new(*big.Int)).(**big.Int)
-	outstruct.Outcome = *abi.ConvertType(out[8], new(uint8)).(*uint8)
-	outstruct.Finalized = *abi.ConvertType(out[9], new(bool)).(*bool)
+	outstruct.Outcome = *abi.ConvertType(out[6], new(uint8)).(*uint8)
+	outstruct.Finalized = *abi.ConvertType(out[7], new(bool)).(*bool)
 
 	return *outstruct, err
 
@@ -653,7 +504,7 @@ func (_UnicePredictionMarket *UnicePredictionMarketCaller) GetMarketInfo(opts *b
 
 // GetMarketInfo is a free data retrieval call binding the contract method 0x23341a05.
 //
-// Solidity: function getMarketInfo() view returns(string _question, string _category, uint256 _bettingDeadline, uint256 _resolutionDeadline, uint256 _totalYesPool, uint256 _totalNoPool, uint256 _totalPool, uint256 _yieldGenerated, uint8 _outcome, bool _finalized)
+// Solidity: function getMarketInfo() view returns(string _question, string _category, uint256 _bettingDeadline, uint256 _resolutionDeadline, uint256 _totalYesPool, uint256 _totalNoPool, uint8 _outcome, bool _finalized)
 func (_UnicePredictionMarket *UnicePredictionMarketSession) GetMarketInfo() (struct {
 	Question           string
 	Category           string
@@ -661,8 +512,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketSession) GetMarketInfo() (str
 	ResolutionDeadline *big.Int
 	TotalYesPool       *big.Int
 	TotalNoPool        *big.Int
-	TotalPool          *big.Int
-	YieldGenerated     *big.Int
 	Outcome            uint8
 	Finalized          bool
 }, error) {
@@ -671,7 +520,7 @@ func (_UnicePredictionMarket *UnicePredictionMarketSession) GetMarketInfo() (str
 
 // GetMarketInfo is a free data retrieval call binding the contract method 0x23341a05.
 //
-// Solidity: function getMarketInfo() view returns(string _question, string _category, uint256 _bettingDeadline, uint256 _resolutionDeadline, uint256 _totalYesPool, uint256 _totalNoPool, uint256 _totalPool, uint256 _yieldGenerated, uint8 _outcome, bool _finalized)
+// Solidity: function getMarketInfo() view returns(string _question, string _category, uint256 _bettingDeadline, uint256 _resolutionDeadline, uint256 _totalYesPool, uint256 _totalNoPool, uint8 _outcome, bool _finalized)
 func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) GetMarketInfo() (struct {
 	Question           string
 	Category           string
@@ -679,8 +528,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) GetMarketInfo(
 	ResolutionDeadline *big.Int
 	TotalYesPool       *big.Int
 	TotalNoPool        *big.Int
-	TotalPool          *big.Int
-	YieldGenerated     *big.Int
 	Outcome            uint8
 	Finalized          bool
 }, error) {
@@ -825,37 +672,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) Outcome() (uin
 	return _UnicePredictionMarket.Contract.Outcome(&_UnicePredictionMarket.CallOpts)
 }
 
-// ProtocolFeeAccrued is a free data retrieval call binding the contract method 0xc58a26bd.
-//
-// Solidity: function protocolFeeAccrued() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCaller) ProtocolFeeAccrued(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _UnicePredictionMarket.contract.Call(opts, &out, "protocolFeeAccrued")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// ProtocolFeeAccrued is a free data retrieval call binding the contract method 0xc58a26bd.
-//
-// Solidity: function protocolFeeAccrued() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketSession) ProtocolFeeAccrued() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.ProtocolFeeAccrued(&_UnicePredictionMarket.CallOpts)
-}
-
-// ProtocolFeeAccrued is a free data retrieval call binding the contract method 0xc58a26bd.
-//
-// Solidity: function protocolFeeAccrued() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) ProtocolFeeAccrued() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.ProtocolFeeAccrued(&_UnicePredictionMarket.CallOpts)
-}
-
 // Question is a free data retrieval call binding the contract method 0x3fad9ae0.
 //
 // Solidity: function question() view returns(string)
@@ -980,37 +796,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) TotalNoPool() 
 	return _UnicePredictionMarket.Contract.TotalNoPool(&_UnicePredictionMarket.CallOpts)
 }
 
-// TotalPool is a free data retrieval call binding the contract method 0xecfb49a3.
-//
-// Solidity: function totalPool() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCaller) TotalPool(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _UnicePredictionMarket.contract.Call(opts, &out, "totalPool")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// TotalPool is a free data retrieval call binding the contract method 0xecfb49a3.
-//
-// Solidity: function totalPool() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketSession) TotalPool() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.TotalPool(&_UnicePredictionMarket.CallOpts)
-}
-
-// TotalPool is a free data retrieval call binding the contract method 0xecfb49a3.
-//
-// Solidity: function totalPool() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) TotalPool() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.TotalPool(&_UnicePredictionMarket.CallOpts)
-}
-
 // TotalYesPool is a free data retrieval call binding the contract method 0x35b185b2.
 //
 // Solidity: function totalYesPool() view returns(uint256)
@@ -1071,37 +856,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketSession) YesShares(arg0 commo
 // Solidity: function yesShares(address ) view returns(uint256)
 func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) YesShares(arg0 common.Address) (*big.Int, error) {
 	return _UnicePredictionMarket.Contract.YesShares(&_UnicePredictionMarket.CallOpts, arg0)
-}
-
-// YieldGenerated is a free data retrieval call binding the contract method 0xddd95e64.
-//
-// Solidity: function yieldGenerated() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCaller) YieldGenerated(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _UnicePredictionMarket.contract.Call(opts, &out, "yieldGenerated")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// YieldGenerated is a free data retrieval call binding the contract method 0xddd95e64.
-//
-// Solidity: function yieldGenerated() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketSession) YieldGenerated() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.YieldGenerated(&_UnicePredictionMarket.CallOpts)
-}
-
-// YieldGenerated is a free data retrieval call binding the contract method 0xddd95e64.
-//
-// Solidity: function yieldGenerated() view returns(uint256)
-func (_UnicePredictionMarket *UnicePredictionMarketCallerSession) YieldGenerated() (*big.Int, error) {
-	return _UnicePredictionMarket.Contract.YieldGenerated(&_UnicePredictionMarket.CallOpts)
 }
 
 // Bet is a paid mutator transaction binding the contract method 0x5229a6fd.
@@ -1228,27 +982,6 @@ func (_UnicePredictionMarket *UnicePredictionMarketSession) SubmitResult(_outcom
 // Solidity: function submitResult(uint8 _outcome) returns()
 func (_UnicePredictionMarket *UnicePredictionMarketTransactorSession) SubmitResult(_outcome uint8) (*types.Transaction, error) {
 	return _UnicePredictionMarket.Contract.SubmitResult(&_UnicePredictionMarket.TransactOpts, _outcome)
-}
-
-// WithdrawProtocolFee is a paid mutator transaction binding the contract method 0x59d8da92.
-//
-// Solidity: function withdrawProtocolFee() returns()
-func (_UnicePredictionMarket *UnicePredictionMarketTransactor) WithdrawProtocolFee(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _UnicePredictionMarket.contract.Transact(opts, "withdrawProtocolFee")
-}
-
-// WithdrawProtocolFee is a paid mutator transaction binding the contract method 0x59d8da92.
-//
-// Solidity: function withdrawProtocolFee() returns()
-func (_UnicePredictionMarket *UnicePredictionMarketSession) WithdrawProtocolFee() (*types.Transaction, error) {
-	return _UnicePredictionMarket.Contract.WithdrawProtocolFee(&_UnicePredictionMarket.TransactOpts)
-}
-
-// WithdrawProtocolFee is a paid mutator transaction binding the contract method 0x59d8da92.
-//
-// Solidity: function withdrawProtocolFee() returns()
-func (_UnicePredictionMarket *UnicePredictionMarketTransactorSession) WithdrawProtocolFee() (*types.Transaction, error) {
-	return _UnicePredictionMarket.Contract.WithdrawProtocolFee(&_UnicePredictionMarket.TransactOpts)
 }
 
 // UnicePredictionMarketBetPlacedIterator is returned from FilterBetPlaced and is used to iterate over the raw logs and unpacked data for BetPlaced events raised by the UnicePredictionMarket contract.
@@ -1397,6 +1130,151 @@ func (_UnicePredictionMarket *UnicePredictionMarketFilterer) ParseBetPlaced(log 
 	return event, nil
 }
 
+// UnicePredictionMarketExpireRefundClaimedIterator is returned from FilterExpireRefundClaimed and is used to iterate over the raw logs and unpacked data for ExpireRefundClaimed events raised by the UnicePredictionMarket contract.
+type UnicePredictionMarketExpireRefundClaimedIterator struct {
+	Event *UnicePredictionMarketExpireRefundClaimed // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *UnicePredictionMarketExpireRefundClaimedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(UnicePredictionMarketExpireRefundClaimed)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(UnicePredictionMarketExpireRefundClaimed)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *UnicePredictionMarketExpireRefundClaimedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *UnicePredictionMarketExpireRefundClaimedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// UnicePredictionMarketExpireRefundClaimed represents a ExpireRefundClaimed event raised by the UnicePredictionMarket contract.
+type UnicePredictionMarketExpireRefundClaimed struct {
+	User   common.Address
+	Amount *big.Int
+	Raw    types.Log // Blockchain specific contextual infos
+}
+
+// FilterExpireRefundClaimed is a free log retrieval operation binding the contract event 0xc5a2a463ffe81791cb601ca8a98e672d33989bf796a198f90da1b0be9e647e0e.
+//
+// Solidity: event ExpireRefundClaimed(address indexed user, uint256 amount)
+func (_UnicePredictionMarket *UnicePredictionMarketFilterer) FilterExpireRefundClaimed(opts *bind.FilterOpts, user []common.Address) (*UnicePredictionMarketExpireRefundClaimedIterator, error) {
+
+	var userRule []interface{}
+	for _, userItem := range user {
+		userRule = append(userRule, userItem)
+	}
+
+	logs, sub, err := _UnicePredictionMarket.contract.FilterLogs(opts, "ExpireRefundClaimed", userRule)
+	if err != nil {
+		return nil, err
+	}
+	return &UnicePredictionMarketExpireRefundClaimedIterator{contract: _UnicePredictionMarket.contract, event: "ExpireRefundClaimed", logs: logs, sub: sub}, nil
+}
+
+// WatchExpireRefundClaimed is a free log subscription operation binding the contract event 0xc5a2a463ffe81791cb601ca8a98e672d33989bf796a198f90da1b0be9e647e0e.
+//
+// Solidity: event ExpireRefundClaimed(address indexed user, uint256 amount)
+func (_UnicePredictionMarket *UnicePredictionMarketFilterer) WatchExpireRefundClaimed(opts *bind.WatchOpts, sink chan<- *UnicePredictionMarketExpireRefundClaimed, user []common.Address) (event.Subscription, error) {
+
+	var userRule []interface{}
+	for _, userItem := range user {
+		userRule = append(userRule, userItem)
+	}
+
+	logs, sub, err := _UnicePredictionMarket.contract.WatchLogs(opts, "ExpireRefundClaimed", userRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(UnicePredictionMarketExpireRefundClaimed)
+				if err := _UnicePredictionMarket.contract.UnpackLog(event, "ExpireRefundClaimed", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseExpireRefundClaimed is a log parse operation binding the contract event 0xc5a2a463ffe81791cb601ca8a98e672d33989bf796a198f90da1b0be9e647e0e.
+//
+// Solidity: event ExpireRefundClaimed(address indexed user, uint256 amount)
+func (_UnicePredictionMarket *UnicePredictionMarketFilterer) ParseExpireRefundClaimed(log types.Log) (*UnicePredictionMarketExpireRefundClaimed, error) {
+	event := new(UnicePredictionMarketExpireRefundClaimed)
+	if err := _UnicePredictionMarket.contract.UnpackLog(event, "ExpireRefundClaimed", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
 // UnicePredictionMarketMarketFinalizedIterator is returned from FilterMarketFinalized and is used to iterate over the raw logs and unpacked data for MarketFinalized events raised by the UnicePredictionMarket contract.
 type UnicePredictionMarketMarketFinalizedIterator struct {
 	Event *UnicePredictionMarketMarketFinalized // Event containing the contract specifics and raw log
@@ -1466,14 +1344,13 @@ func (it *UnicePredictionMarketMarketFinalizedIterator) Close() error {
 
 // UnicePredictionMarketMarketFinalized represents a MarketFinalized event raised by the UnicePredictionMarket contract.
 type UnicePredictionMarketMarketFinalized struct {
-	Outcome        uint8
-	YieldGenerated *big.Int
-	Raw            types.Log // Blockchain specific contextual infos
+	Outcome uint8
+	Raw     types.Log // Blockchain specific contextual infos
 }
 
-// FilterMarketFinalized is a free log retrieval operation binding the contract event 0x3a857c7f5c32fc8fdc141370d2de1e7a786eb19133eb6c59feb1c8fad14a46c8.
+// FilterMarketFinalized is a free log retrieval operation binding the contract event 0xe22647b990bb2c9f1fab2207a70363abb43ac42adeeaa3ec22f78ad1edf183a5.
 //
-// Solidity: event MarketFinalized(uint8 outcome, uint256 yieldGenerated)
+// Solidity: event MarketFinalized(uint8 outcome)
 func (_UnicePredictionMarket *UnicePredictionMarketFilterer) FilterMarketFinalized(opts *bind.FilterOpts) (*UnicePredictionMarketMarketFinalizedIterator, error) {
 
 	logs, sub, err := _UnicePredictionMarket.contract.FilterLogs(opts, "MarketFinalized")
@@ -1483,9 +1360,9 @@ func (_UnicePredictionMarket *UnicePredictionMarketFilterer) FilterMarketFinaliz
 	return &UnicePredictionMarketMarketFinalizedIterator{contract: _UnicePredictionMarket.contract, event: "MarketFinalized", logs: logs, sub: sub}, nil
 }
 
-// WatchMarketFinalized is a free log subscription operation binding the contract event 0x3a857c7f5c32fc8fdc141370d2de1e7a786eb19133eb6c59feb1c8fad14a46c8.
+// WatchMarketFinalized is a free log subscription operation binding the contract event 0xe22647b990bb2c9f1fab2207a70363abb43ac42adeeaa3ec22f78ad1edf183a5.
 //
-// Solidity: event MarketFinalized(uint8 outcome, uint256 yieldGenerated)
+// Solidity: event MarketFinalized(uint8 outcome)
 func (_UnicePredictionMarket *UnicePredictionMarketFilterer) WatchMarketFinalized(opts *bind.WatchOpts, sink chan<- *UnicePredictionMarketMarketFinalized) (event.Subscription, error) {
 
 	logs, sub, err := _UnicePredictionMarket.contract.WatchLogs(opts, "MarketFinalized")
@@ -1520,157 +1397,12 @@ func (_UnicePredictionMarket *UnicePredictionMarketFilterer) WatchMarketFinalize
 	}), nil
 }
 
-// ParseMarketFinalized is a log parse operation binding the contract event 0x3a857c7f5c32fc8fdc141370d2de1e7a786eb19133eb6c59feb1c8fad14a46c8.
+// ParseMarketFinalized is a log parse operation binding the contract event 0xe22647b990bb2c9f1fab2207a70363abb43ac42adeeaa3ec22f78ad1edf183a5.
 //
-// Solidity: event MarketFinalized(uint8 outcome, uint256 yieldGenerated)
+// Solidity: event MarketFinalized(uint8 outcome)
 func (_UnicePredictionMarket *UnicePredictionMarketFilterer) ParseMarketFinalized(log types.Log) (*UnicePredictionMarketMarketFinalized, error) {
 	event := new(UnicePredictionMarketMarketFinalized)
 	if err := _UnicePredictionMarket.contract.UnpackLog(event, "MarketFinalized", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// UnicePredictionMarketPrincipalRefundedIterator is returned from FilterPrincipalRefunded and is used to iterate over the raw logs and unpacked data for PrincipalRefunded events raised by the UnicePredictionMarket contract.
-type UnicePredictionMarketPrincipalRefundedIterator struct {
-	Event *UnicePredictionMarketPrincipalRefunded // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *UnicePredictionMarketPrincipalRefundedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(UnicePredictionMarketPrincipalRefunded)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(UnicePredictionMarketPrincipalRefunded)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *UnicePredictionMarketPrincipalRefundedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *UnicePredictionMarketPrincipalRefundedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// UnicePredictionMarketPrincipalRefunded represents a PrincipalRefunded event raised by the UnicePredictionMarket contract.
-type UnicePredictionMarketPrincipalRefunded struct {
-	User   common.Address
-	Amount *big.Int
-	Raw    types.Log // Blockchain specific contextual infos
-}
-
-// FilterPrincipalRefunded is a free log retrieval operation binding the contract event 0xecc88f8ff3d5d68ef9e8a892f48408080ab947617b2256affbba9ae80898a833.
-//
-// Solidity: event PrincipalRefunded(address indexed user, uint256 amount)
-func (_UnicePredictionMarket *UnicePredictionMarketFilterer) FilterPrincipalRefunded(opts *bind.FilterOpts, user []common.Address) (*UnicePredictionMarketPrincipalRefundedIterator, error) {
-
-	var userRule []interface{}
-	for _, userItem := range user {
-		userRule = append(userRule, userItem)
-	}
-
-	logs, sub, err := _UnicePredictionMarket.contract.FilterLogs(opts, "PrincipalRefunded", userRule)
-	if err != nil {
-		return nil, err
-	}
-	return &UnicePredictionMarketPrincipalRefundedIterator{contract: _UnicePredictionMarket.contract, event: "PrincipalRefunded", logs: logs, sub: sub}, nil
-}
-
-// WatchPrincipalRefunded is a free log subscription operation binding the contract event 0xecc88f8ff3d5d68ef9e8a892f48408080ab947617b2256affbba9ae80898a833.
-//
-// Solidity: event PrincipalRefunded(address indexed user, uint256 amount)
-func (_UnicePredictionMarket *UnicePredictionMarketFilterer) WatchPrincipalRefunded(opts *bind.WatchOpts, sink chan<- *UnicePredictionMarketPrincipalRefunded, user []common.Address) (event.Subscription, error) {
-
-	var userRule []interface{}
-	for _, userItem := range user {
-		userRule = append(userRule, userItem)
-	}
-
-	logs, sub, err := _UnicePredictionMarket.contract.WatchLogs(opts, "PrincipalRefunded", userRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(UnicePredictionMarketPrincipalRefunded)
-				if err := _UnicePredictionMarket.contract.UnpackLog(event, "PrincipalRefunded", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParsePrincipalRefunded is a log parse operation binding the contract event 0xecc88f8ff3d5d68ef9e8a892f48408080ab947617b2256affbba9ae80898a833.
-//
-// Solidity: event PrincipalRefunded(address indexed user, uint256 amount)
-func (_UnicePredictionMarket *UnicePredictionMarketFilterer) ParsePrincipalRefunded(log types.Log) (*UnicePredictionMarketPrincipalRefunded, error) {
-	event := new(UnicePredictionMarketPrincipalRefunded)
-	if err := _UnicePredictionMarket.contract.UnpackLog(event, "PrincipalRefunded", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
@@ -2025,15 +1757,14 @@ func (it *UnicePredictionMarketWinningsClaimedIterator) Close() error {
 
 // UnicePredictionMarketWinningsClaimed represents a WinningsClaimed event raised by the UnicePredictionMarket contract.
 type UnicePredictionMarketWinningsClaimed struct {
-	User      common.Address
-	Principal *big.Int
-	Yield     *big.Int
-	Raw       types.Log // Blockchain specific contextual infos
+	User   common.Address
+	Amount *big.Int
+	Raw    types.Log // Blockchain specific contextual infos
 }
 
-// FilterWinningsClaimed is a free log retrieval operation binding the contract event 0x7472e24de4628e34b41a2aa1688ed4b46a9145b2de1cf93d74902473ccc1740d.
+// FilterWinningsClaimed is a free log retrieval operation binding the contract event 0x1a31e733a172afcf46074b3106c17f0c298e226442682a03c1e99ce256139ec2.
 //
-// Solidity: event WinningsClaimed(address indexed user, uint256 principal, uint256 yield)
+// Solidity: event WinningsClaimed(address indexed user, uint256 amount)
 func (_UnicePredictionMarket *UnicePredictionMarketFilterer) FilterWinningsClaimed(opts *bind.FilterOpts, user []common.Address) (*UnicePredictionMarketWinningsClaimedIterator, error) {
 
 	var userRule []interface{}
@@ -2048,9 +1779,9 @@ func (_UnicePredictionMarket *UnicePredictionMarketFilterer) FilterWinningsClaim
 	return &UnicePredictionMarketWinningsClaimedIterator{contract: _UnicePredictionMarket.contract, event: "WinningsClaimed", logs: logs, sub: sub}, nil
 }
 
-// WatchWinningsClaimed is a free log subscription operation binding the contract event 0x7472e24de4628e34b41a2aa1688ed4b46a9145b2de1cf93d74902473ccc1740d.
+// WatchWinningsClaimed is a free log subscription operation binding the contract event 0x1a31e733a172afcf46074b3106c17f0c298e226442682a03c1e99ce256139ec2.
 //
-// Solidity: event WinningsClaimed(address indexed user, uint256 principal, uint256 yield)
+// Solidity: event WinningsClaimed(address indexed user, uint256 amount)
 func (_UnicePredictionMarket *UnicePredictionMarketFilterer) WatchWinningsClaimed(opts *bind.WatchOpts, sink chan<- *UnicePredictionMarketWinningsClaimed, user []common.Address) (event.Subscription, error) {
 
 	var userRule []interface{}
@@ -2090,9 +1821,9 @@ func (_UnicePredictionMarket *UnicePredictionMarketFilterer) WatchWinningsClaime
 	}), nil
 }
 
-// ParseWinningsClaimed is a log parse operation binding the contract event 0x7472e24de4628e34b41a2aa1688ed4b46a9145b2de1cf93d74902473ccc1740d.
+// ParseWinningsClaimed is a log parse operation binding the contract event 0x1a31e733a172afcf46074b3106c17f0c298e226442682a03c1e99ce256139ec2.
 //
-// Solidity: event WinningsClaimed(address indexed user, uint256 principal, uint256 yield)
+// Solidity: event WinningsClaimed(address indexed user, uint256 amount)
 func (_UnicePredictionMarket *UnicePredictionMarketFilterer) ParseWinningsClaimed(log types.Log) (*UnicePredictionMarketWinningsClaimed, error) {
 	event := new(UnicePredictionMarketWinningsClaimed)
 	if err := _UnicePredictionMarket.contract.UnpackLog(event, "WinningsClaimed", log); err != nil {

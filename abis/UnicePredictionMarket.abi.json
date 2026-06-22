@@ -50,32 +50,6 @@
   },
   {
     "type": "function",
-    "name": "MOCK_APY_BPS",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "PROTOCOL_FEE_BPS",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
     "name": "admin",
     "inputs": [],
     "outputs": [
@@ -192,19 +166,6 @@
   },
   {
     "type": "function",
-    "name": "createdAt",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
     "name": "expireClaim",
     "inputs": [],
     "outputs": [],
@@ -242,30 +203,7 @@
     ],
     "outputs": [
       {
-        "name": "principal",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "yieldEarned",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "total",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "getEstimatedYield",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "estimated",
+        "name": "claimable",
         "type": "uint256",
         "internalType": "uint256"
       }
@@ -304,16 +242,6 @@
       },
       {
         "name": "_totalNoPool",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "_totalPool",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "_yieldGenerated",
         "type": "uint256",
         "internalType": "uint256"
       },
@@ -395,19 +323,6 @@
   },
   {
     "type": "function",
-    "name": "protocolFeeAccrued",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
     "name": "question",
     "inputs": [],
     "outputs": [
@@ -473,19 +388,6 @@
   },
   {
     "type": "function",
-    "name": "totalPool",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
     "name": "totalYesPool",
     "inputs": [],
     "outputs": [
@@ -499,13 +401,6 @@
   },
   {
     "type": "function",
-    "name": "withdrawProtocolFee",
-    "inputs": [],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "yesShares",
     "inputs": [
       {
@@ -514,19 +409,6 @@
         "internalType": "address"
       }
     ],
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "yieldGenerated",
-    "inputs": [],
     "outputs": [
       {
         "name": "",
@@ -563,26 +445,7 @@
   },
   {
     "type": "event",
-    "name": "MarketFinalized",
-    "inputs": [
-      {
-        "name": "outcome",
-        "type": "uint8",
-        "indexed": false,
-        "internalType": "uint8"
-      },
-      {
-        "name": "yieldGenerated",
-        "type": "uint256",
-        "indexed": false,
-        "internalType": "uint256"
-      }
-    ],
-    "anonymous": false
-  },
-  {
-    "type": "event",
-    "name": "PrincipalRefunded",
+    "name": "ExpireRefundClaimed",
     "inputs": [
       {
         "name": "user",
@@ -595,6 +458,19 @@
         "type": "uint256",
         "indexed": false,
         "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MarketFinalized",
+    "inputs": [
+      {
+        "name": "outcome",
+        "type": "uint8",
+        "indexed": false,
+        "internalType": "uint8"
       }
     ],
     "anonymous": false
@@ -642,13 +518,7 @@
         "internalType": "address"
       },
       {
-        "name": "principal",
-        "type": "uint256",
-        "indexed": false,
-        "internalType": "uint256"
-      },
-      {
-        "name": "yield",
+        "name": "amount",
         "type": "uint256",
         "indexed": false,
         "internalType": "uint256"
