@@ -4,12 +4,15 @@ import (
 	"context"
 	"log"
 	"os"
+	"os/signal"
 	"strconv"
+	"syscall"
 	"time"
 
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 
+	"github.com/insizaki/unice-indexer/internal/api"
 	"github.com/insizaki/unice-indexer/internal/client"
 	dbpkg "github.com/insizaki/unice-indexer/internal/db"
 	"github.com/insizaki/unice-indexer/internal/indexer"
@@ -55,8 +58,43 @@ func main() {
 		log.Fatalf("Failed to create indexer: %v", err)
 	}
 
-	// Run
-	indexer.Run(context.Background(), idx)
+	// Init API server
+	apiPort := os.Getenv("API_PORT")
+	if apiPort == "" {
+		apiPort = ":8080"
+	}
+	corsOrigins := os.Getenv("CORS_ORIGINS")
+	apiServer := api.NewServer(db, apiPort, corsOrigins)
+
+	// Start API server in goroutine
+	go apiServer.Start()
+
+	// Setup graceful shutdown
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+
+	sigCh := make(chan os.Signal, 1)
+	signal.Notify(sigCh, syscall.SIGINT, syscall.SIGTERM)
+
+	go func() {
+		sig := <-sigCh
+		log.Printf("[main] Received signal %s, shutting down...", sig)
+		cancel()
+
+		// Shutdown API server with 5s timeout
+		shutdownCtx, shutdownCancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer shutdownCancel()
+		if err := apiServer.Shutdown(shutdownCtx); err != nil {
+			log.Printf("[main] API server shutdown error: %v", err)
+		}
+	}()
+
+	// Run indexer (blocking)
+	if err := idx.Start(ctx); err != nil {
+		log.Printf("[indexer] Error: %v", err)
+	}
+
+	log.Println("[main] Shutdown complete.")
 }
 
 func envUint64(key string, fallback uint64) uint64 {
@@ -70,3 +108,4 @@ func envUint64(key string, fallback uint64) uint64 {
 	}
 	return n
 }
+
